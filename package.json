@@ -204,11 +204,6 @@
     "vitest": "^2.1.7",
     "wrangler": "^4.5.1"
   },
-  "pnpm": {
-    "overrides": {
-      "wrangler": "3.61.0"
-    }
-  },
   "resolutions": {
     "@typescript-eslint/utils": "^8.0.0-alpha.30"
   },
