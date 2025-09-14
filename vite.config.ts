@@ -13,15 +13,14 @@ dotenv.config();
 
 export default defineConfig((config) => {
   return {
-    // ALTERAÇÃO EXPLÍCITA PARA CORRIGIR O ACESSO NO EASYPANEL
+    // CORREÇÃO FINAL E UNIVERSAL PARA EASYPANEL E OUTROS AMBIENTES
     server: {
       host: true, // Garante que o servidor escute em todas as interfaces de rede
-      // Adiciona a URL exata do Easypanel à lista de hosts permitidos
-      allowedHosts: [
-        'bolt-diy-bolt-diy.d4c3vq.easypanelhost'
-      ]
+      // Permite que QUALQUER host acesse o servidor.
+      // O '*' é um wildcard (coringa).
+      allowedHosts: ['*']
     },
-    // FIM DA ALTERAÇÃO
+    // FIM DA CORREÇÃO
     
     define: {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
