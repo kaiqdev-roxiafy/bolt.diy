@@ -13,6 +13,12 @@ dotenv.config();
 
 export default defineConfig((config) => {
   return {
+    // ADIÇÃO PARA CORRIGIR O ACESSO NO EASYPANEL
+    server: {
+      host: true,
+    },
+    // FIM DA ADIÇÃO
+    
     define: {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     },
